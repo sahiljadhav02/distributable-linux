@@ -3,6 +3,9 @@ name: "MetaCall Distributable Linux Release"
 on:
   repository_dispatch:
     types: [test-trigger]
+  push:
+    tags:
+      - 'v*.*.*'
 
 env:
   ASSET_NAME: metacall-tarball-linux-amd64.tar.gz
